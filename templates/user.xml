@@ -1,15 +1,21 @@
 <templateSet group="user">
-  <template name="log" value="Timber.d(&quot;$METHODNAME$($METHODARGS$)&quot;);$END$" description="Timber debug log line" toReformat="true" toShortenFQNames="true">
+  <template name="tlogm" value="if (BuildConfig.DEBUG) Timber.d(&quot;$METHODNAME$() $ARGVALUES$ = [ %s ]&quot;, $ARGNAMES$);$END$" description="TImber Log debug method name and args" toReformat="false" toShortenFQNames="true">
     <variable name="METHODNAME" expression="methodName()" defaultValue="" alwaysStopAt="true" />
-    <variable name="METHODARGS" expression="methodParameters()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGVALUES" expression="groovyScript(&quot;_1.collect { it }.join(' = [ %s ], ')&quot;, methodParameters()) + &quot; = [ %s ]&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGNAMES" expression="groovyScript(&quot;_1.collect { it }.join(', ')&quot;, methodParameters())" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_CODE" value="false" />
       <option name="JAVA_STATEMENT" value="true" />
-      <option name="JAVA_EXPRESSION" value="true" />
-      <option name="JAVA_DECLARATION" value="true" />
-      <option name="JAVA_COMMENT" value="true" />
-      <option name="JAVA_STRING" value="true" />
-      <option name="COMPLETION" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+  <template name="dg" value="if (BuildConfig.DEBUG) {&#10;    $SELECTION$&#10;}$END$" description="DEBUG guard" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
