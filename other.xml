@@ -66,8 +66,14 @@
     <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="false" />
   </component>
   <component name="SvnApplicationSettings">
+    <option name="myCheckoutURLs">
+      <list>
+        <option value="http://isdsvn.wellsfargo.com/svn/repos/" />
+      </list>
+    </option>
     <option name="myTypedURLs">
       <list>
+        <option value="http://isdsvn.wellsfargo.com/svn/repos/" />
         <option value="http://github.com/alanwgeorge/uiplay" />
         <option value="https://github.com/alanwgeorge/uiplay" />
         <option value="https://uiplay.googlecode.com/svn/" />
