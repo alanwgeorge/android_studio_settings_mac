@@ -4,7 +4,6 @@
   <option name="CONSOLE_FONT_NAME" value="Menlo" />
   <option name="EDITOR_FONT_NAME" value="Consolas" />
   <attributes>
-    <option name="DEFAULT_TAG" baseAttributes="TEXT" />
     <option name="TEXT">
       <value>
         <option name="FOREGROUND" value="0" />
