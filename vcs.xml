@@ -60,5 +60,6 @@
   </component>
   <component name="VcsApplicationSettings">
     <option name="PATCH_STORAGE_LOCATION" value="$USER_HOME$/src/Android-RxJava" />
+    <option name="SHOW_WHITESPACES_IN_LST" value="true" />
   </component>
 </application>
